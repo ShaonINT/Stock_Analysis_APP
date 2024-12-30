@@ -2,7 +2,8 @@
 
 A Flask-based application utilizing PhiData and Groq APIs to analyze stock performance, providing insights such as analyst ratings, price targets, and top news highlights.
 
-![AI Agent Demo](Experiments/Screenshot 2024-12-30 at 11.55.14.png)
+<img width="2416" alt="Screenshot 2024-12-30 at 12 20 14" src="https://github.com/user-attachments/assets/87cab25b-a357-48c8-95b4-102a167a3e5f" />
+
 
 ### **📚 Overview**
 
