@@ -1,39 +1,100 @@
-# AI-Driven Stock Analysis App
+# AI-Driven Stock Analysis Application
 
-This project demonstrates the power of AI agents in automating stock analysis. It provides real-time insights into analyst recommendations, technical indicators, and the latest news, all through a simple and intuitive web application.
+A Flask-based application utilizing PhiData and Groq APIs to analyze stock performance, providing insights such as analyst ratings, price targets, and top news highlights.
 
----
+### **📚 Overview**
 
-## Why This Project Matters
+This project demonstrates the integration of AI agents with financial tools to create a real-world application for stock analysis. It uses the PhiData and Groq APIs to leverage advanced AI models for summarizing financial data and retrieving up-to-date news.
 
-The rise of AI agents is reshaping industries. By 2034, **70% of jobs could be automated**, according to OpenAI’s CEO, while Satya Nadella predicts that **AI agents will disrupt SaaS services**. This project showcases how an AI-driven application can transform decision-making and streamline workflows in the financial sector.
+### 🚀 Features
 
----
+	•	AI-Driven Insights: Summarizes key stock performance indicators like analyst ratings, price targets, and top news.
+	•	Groq & PhiData APIs: Seamlessly integrates AI models for data retrieval and processing.
+	•	Responsive User Interface: Provides a sleek, mobile-friendly design.
+	•	Customizable Agents: Combines AI tools to cater to specific data needs.
 
-## Key Features
-- **Real-Time Stock News**: Fetches the latest stock-related news using DuckDuckGo.
-- **Analyst Recommendations**: Summarizes buy, hold, and sell recommendations to assist in decision-making.
-- **Technical Indicators**: Provides insights into RSI, 50 & 200-day moving averages, and volume trends.
-- **Interactive Interface**: A user-friendly web app built with Flask.
+### 📂 Project Structure
 
----
+Ai Agent Building/
+├── .venv/                  # Virtual environment (hidden)
+├── Experiments/            # Experiment-related scripts or notebooks (optional)
+├── templates/              # HTML templates for the Flask app
+│   └── index.html          # Main HTML template for the user interface
+├── .env                    # Environment variables (API keys)
+├── .gitignore              # Git ignored files
+├── main.py                 # Main application logic
+├── README.md               # Project documentation
+├── requirements.txt        # Python dependencies
 
-## Technologies Used
-- **Python**: For backend development and AI integration.
-- **Flask**: Web framework for the application.
-- **Phi Agent Tools**:
-  - Groq for advanced AI-powered analysis.
-  - YFinanceTools for stock market data retrieval.
-  - DuckDuckGo for real-time news.
-- **HTML/CSS**: To create a clean and modern UI.
+### 🌟 How to Set Up
 
----
+#### Step 1: Clone the Repository
 
-## How to Run This Project
-### Prerequisites
-- **Python 3.8 or higher** installed on your machine.
+    git clone https://github.com/ShaonINT/Stock_Analysis_APP.git
+    cd Stock_Analysis_APP
 
-### Steps
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/ShaonINT/Stock_Analysis_APP.git
+#### Step 2: Set Up a Virtual Environment
+
+    python -m venv .venv
+    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+#### Step 3: Install Dependencies
+
+    pip install -r requirements.txt
+
+#### Step 4: Acquire API Keys
+
+    To use this project, you need to obtain API keys from PhiData and Groq:
+
+##### PhiData API Key
+
+	1.	Sign up at PhiData.
+	2.	Navigate to your account dashboard.
+	3.	Generate an API key.
+	4.	Add it to the .env file as follows:
+        PHIDATA_API_KEY=your_phidata_api_key
+
+##### Groq API Key
+
+	1.	Register at Groq Console.
+	2.	Subscribe to the required AI models (e.g., llama-3.1-70b-versatile, you can choose any according to your requirements).
+	3.	Generate an API key.
+	4.	Add it to the .env file as follows:
+        GROQ_API_KEY=your_groq_api_key
+
+#### Step 5: Run the Application
+
+    python main.py
+    Visit the application in your browser at http://127.0.0.1:5000.
+
+### 📈 How It Works
+
+	1.	Enter a stock symbol (e.g., AAPL) in the input field.
+	2.	Click Analyze to retrieve:
+	•	Analyst ratings.
+	•	Price targets.
+	•	Top 3 latest news articles.
+	3.	The AI agents use Groq’s models and tools like DuckDuckGo and YFinanceTools to fetch and process the data.
+
+### 🔑 Key Components
+
+	•	Web Search Agent:
+	•	Fetches relevant stock-related news using DuckDuckGo.
+	•	Finance Agent:
+	•	Retrieves financial data such as stock prices, analyst recommendations, and price targets.
+	•	Multi-Agent System:
+	•	Combines the Web Search Agent and Finance Agent to deliver consolidated results.
+
+### 🛠 Technologies Used
+
+	•	Python: Flask, dotenv
+	•	AI Models: Groq API
+	•	Web Tools: PhiData, DuckDuckGo, YFinanceTools
+	•	HTML/CSS: Responsive design using custom styles.
+
+
+### 🔗 Resources
+
+	•	PhiData Documentation
+	•	Groq Console
+
