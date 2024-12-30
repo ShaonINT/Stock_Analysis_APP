@@ -19,7 +19,7 @@ Groq.api_key = os.getenv("GROQ_API_KEY")
 websearch_agent = Agent(
     name="Web Search Agent",
     role="Search for latest news",
-    model=Groq(id="llama-3.1-70b-versatile"),
+    model=Groq(id="gemma2-9b-it"),
     tools=[DuckDuckGo()],
     instructions=["Always include sources in the response."],
     show_tool_calls=False,
@@ -29,7 +29,7 @@ websearch_agent = Agent(
 
 finance_agent = Agent(
     name="Finance Agent",
-    model=Groq(id="llama-3.1-70b-versatile"),
+    model=Groq(id="gemma2-9b-it"),
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, company_news=True)],
     instructions=["Provide stock fundamentals, key ratings, and price targets."],
     show_tool_calls=False,
@@ -39,7 +39,7 @@ finance_agent = Agent(
 
 multi_ai_agent = Agent(
     team=[websearch_agent, finance_agent],
-    model=Groq(id="llama-3.1-70b-versatile"),
+    model=Groq(id="gemma2-9b-it"),
     instructions=[
         "Summarize stock data.",
         "Include analyst ratings, top news highlights, and price targets.",
