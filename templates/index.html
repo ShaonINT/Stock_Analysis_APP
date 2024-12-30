@@ -21,13 +21,13 @@
             margin: 0;
             background-color: #007BFF;
             color: white;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         /* Main Container */
         .container {
-            max-width: 600px;
-            margin: 40px auto;
+            max-width: 90%;
+            margin: 20px auto;
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -39,6 +39,11 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
         }
 
         input {
@@ -76,16 +81,30 @@
             padding: 15px;
             background-color: #f1f1f1;
             border-radius: 4px;
+            border: 1px solid #ddd;
             font-size: 1rem;
             line-height: 1.5;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+        }
+
+        .response-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 20px;
             color: #666;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
         footer a {
@@ -103,15 +122,22 @@
     <div class="container">
         <form action="/analyze" method="post">
             <label for="stock_symbol"><strong>Enter a Stock Symbol:</strong></label>
-            <input type="text" id="stock_symbol" name="stock_symbol" placeholder="e.g., MSTR" required>
+            <input type="text" id="stock_symbol" name="stock_symbol" placeholder="e.g., AAPL" required>
             <button type="submit">Analyze</button>
         </form>
+        {% if response %}
         <div id="response">
-            <!-- Response from the server will be displayed here -->
+            <div class="response-title">Analysis Result:</div>
+            <pre>{{ response }}</pre>
         </div>
+        {% elif error %}
+        <div id="response" class="error">
+            {{ error }}
+        </div>
+        {% endif %}
     </div>
     <footer>
-        Powered by <a href="https://example.com" target="_blank">Shaon Biswas</a> | © 2024
+        Developed by <a href="https://example.com" target="_blank">Shaon Biswas</a> | © 2024
     </footer>
 </body>
 </html>
