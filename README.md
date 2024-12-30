@@ -13,19 +13,6 @@ This project demonstrates the integration of AI agents with financial tools to c
 	•	Responsive User Interface: Provides a sleek, mobile-friendly design.
 	•	Customizable Agents: Combines AI tools to cater to specific data needs.
 
-### 📂 Project Structure
-
-Ai Agent Building/
-├── .venv/                  # Virtual environment (hidden)
-├── Experiments/            # Experiment-related scripts or notebooks (optional)
-├── templates/              # HTML templates for the Flask app
-│   └── index.html          # Main HTML template for the user interface
-├── .env                    # Environment variables (API keys)
-├── .gitignore              # Git ignored files
-├── main.py                 # Main application logic
-├── README.md               # Project documentation
-├── requirements.txt        # Python dependencies
-
 ### 🌟 How to Set Up
 
 #### Step 1: Clone the Repository
